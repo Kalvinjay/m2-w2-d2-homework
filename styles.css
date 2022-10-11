@@ -24,8 +24,9 @@ header {
 
 /* Navigation */
 .main-menu {
-    margin-left: 227px;
+    margin-left: 176px;
     font-weight: 400;
+    height: 100px;
 }
 .main-menu ul li {
     list-style-type: none;
@@ -34,9 +35,11 @@ header {
     padding-left: 25px;
     padding-right: 25px;
     border-left: 1px solid rgba(202, 204, 202, 0.6);
-    line-height: 100px;
+    line-height: 85px;
     text-transform: uppercase;
     font-size: 14px;
+    background: white;
+    border: 1px black;
 }
 .main-menu ul li a {
     text-decoration: none;
@@ -59,6 +62,15 @@ main {
     margin: 2em 0;
     font-family:Arial, Helvetica, sans-serif;
 }
+main .info1 .info2 {
+    border: 1px solid black;
+}
+h1 {
+    font-size: 2.5em;
+    color: #9ed034;
+    text-align: center;
+    margin-top: 90px;
+}
 main h1 {
     font-size: 2.5em;
     padding-bottom: 0.5em;
@@ -67,6 +79,12 @@ main h1 {
 main h2 {
     font-size: 1.7em;
 }
+ .info {
+    border: 1px solid black;
+}
+.info2 {
+    border: 1px solid black;
+}
 
 /* Partners */
 section {
@@ -74,10 +92,11 @@ section {
     background-color: #4288C3;
 }
 section #partners {  
-    width: 1200px;
+    /* width: 1200px; */
     padding: 2em 0 2em 0;
     margin: 0 auto;
     text-align: center;
+    width: fit-content;
 }
 section #partners .partner {
     display: inline-block;
@@ -145,7 +164,53 @@ footer #nondisclaimer .social .fa-instagram {
 
 /* Home */
 
+/* Extra small devices */
 
+@media (max-width: 575px) {
+    #partners {
+        display: grid;
+        grid-template-columns: 1, 1fr;
+        grid-gap: 25px;
+    }
+}
+
+/* Small devices (phones, 768px) */
+@media (min-width: 576px) {
+    #partners {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 75px;
+    }
+}
+@media (min-width: 768px) {
+    #partners {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+    }
+}
+@media (min-width: 992px) {
+    #partners {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Medium and up devices (phones, 768px and up) */
+@media only screen and (min-width: 768px) {
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+}
+/* Large devices n up */
+
+/* XL devices */
+
+
+/* */ 
 
 /* ACTIVATE BELOW WHEN TESTING NAVIGATION AND OTHERS FOR RWD */
 
